@@ -3,6 +3,7 @@ import cors from "cors";
 import helmet from "helmet";
 import dotenv from "dotenv";
 import authRouter from "./routes/authRoutes";
+import articleRouter from "./routes/articleRoutes";
 
 dotenv.config();
 
@@ -17,5 +18,6 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/auth", authRouter);
+app.use("/articles", articleRouter);
 
 export default app;
