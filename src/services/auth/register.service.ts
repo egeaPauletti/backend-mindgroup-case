@@ -1,13 +1,13 @@
 import bcrypt from "bcrypt";
 import prisma from "../../prisma";
+import RegisterDTO from "../../schemas/userSchema";
 
-interface RegisterDTO {
-  name: string;
-  email: string;
-  password: string;
-}
-
-export const registerUser = async ({ name, email, password }: RegisterDTO) => {
+export const registerUser = async ({
+  name,
+  email,
+  password,
+  imageProfile = "/images/user.png",
+}: RegisterDTO) => {
   const existingUser = await prisma.user.findUnique({ where: { email } });
 
   if (existingUser) {
@@ -21,11 +21,13 @@ export const registerUser = async ({ name, email, password }: RegisterDTO) => {
       name,
       email,
       password: hashedPassword,
+      imageProfile, // Agora reconhecido corretamente
     },
     select: {
       id: true,
       name: true,
       email: true,
+      imageProfile: true,
     },
   });
 

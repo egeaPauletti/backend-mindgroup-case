@@ -4,6 +4,7 @@ import helmet from "helmet";
 import dotenv from "dotenv";
 import authRouter from "./routes/authRoutes";
 import articleRouter from "./routes/articleRoutes";
+import path from "path";
 
 dotenv.config();
 
@@ -17,6 +18,7 @@ app.get("/", (req, res) => {
   res.send("API rodando!!! 🚀");
 });
 
+app.use(express.static(path.resolve("public")));
 app.use("/api/auth", authRouter);
 app.use("/articles", articleRouter);
 
