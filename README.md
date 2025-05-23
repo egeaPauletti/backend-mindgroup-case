@@ -1,6 +1,5 @@
-# 📚 Blog API - Backend
-
-Este é o backend de um site de blog, desenvolvido com **Node.js** e **Express**, utilizando **Prisma ORM** para interação com um banco de dados **MySQL**. A aplicação oferece funcionalidades completas de **CRUD para artigos**, além de **sistema de autenticação de usuários** com **JWT (JSON Web Token)**.
+# 📚 Mind API - Backend
+Este é o back end do Blog App um projeto desenvolvido para a empresa MindGroup, desenvolvido com **Node.js** e **Express**, utilizando **Prisma ORM** para interação com um banco de dados **MySQL**. A aplicação oferece funcionalidades completas de **CRUD para artigos**, além de **sistema de autenticação de usuários** com **JWT (JSON Web Token)**.
 
 ---
 
