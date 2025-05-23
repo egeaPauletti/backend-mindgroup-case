@@ -13,11 +13,17 @@ interface LoginDTO {
 export const loginUser = async ({ email, password }: LoginDTO) => {
   const user = await prisma.user.findUnique({
     where: { email },
-    select: { id: true, name: true, email: true, password: true },
+    select: {
+      id: true,
+      name: true,
+      email: true,
+      password: true,
+      imageProfile: true,
+    },
   });
 
   if (!user) {
-    throw new Error("Credenciais inválidas.");
+    throw new Error("Email ou Senha incorreto.");
   }
 
   const isMatch = await bcrypt.compare(password, user.password);
@@ -40,6 +46,7 @@ export const loginUser = async ({ email, password }: LoginDTO) => {
       id: user.id,
       name: user.name,
       email: user.email,
+      imageProfile: user.imageProfile,
     },
     token,
   };
