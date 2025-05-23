@@ -28,13 +28,13 @@ Este é o backend de um site de blog, desenvolvido com **Node.js** e **Express**
 - **Delete**: Excluir um artigo.
 -  Rotas Principais
 
-## 📌 Autenticação
+## 🛠️ Rotas Principais
 
+## 📌 Autenticação
 - POST /auth/register — Cadastro de usuário
 - POST /auth/login — Login de usuário
-- 
-## 📌 Artigos
 
+## 📌 Artigos
 - GET /articles — Listar todos os artigos
 - GET /articles/:id — Buscar artigo por ID
 - POST /articles — Criar novo artigo (autenticado)
