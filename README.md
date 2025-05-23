@@ -30,8 +30,8 @@ Este é o back end do Blog App um projeto desenvolvido para a empresa MindGroup,
 ## 🛠️ Rotas Principais
 
 ## 📌 Autenticação
-- POST /auth/register — Cadastro de usuário
-- POST /auth/login — Login de usuário
+- POST /api/auth/register — Cadastro de usuário
+- POST /api/auth/login — Login de usuário
 
 ## 📌 Artigos
 - GET /articles — Listar todos os artigos
